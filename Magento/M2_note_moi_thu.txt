@@ -1,5 +1,13 @@
 ﻿
 --------------------------------------------------------------------------------------------------------------------------------
+Fix lỗi redirect https sau khi clone 1 website sử dụng SSL về local
+Run sql
+UPDATE core_config_data SET value=REPLACE(value, 'https', 'http') WHERE value LIKE 'https%';
+sau đó run sql
+UPDATE core_config_data SET value=0 
+WHERE path='web/secure/use_in_frontend' OR path='web/secure/use_in_adminhtml' OR path='web/url/redirect_to_base';
+
+--------------------------------------------------------------------------------------------------------------------------------
 Lỗi: Element 'group': Missing child element(s). Expected is ( job ).
 Khi chạy bin/magento cron:run
 Nguyên nhân: Có thể đang có 1 file xml nào đó mà chỉ có thẻ config mà ko có các thẻ con bên trong.
