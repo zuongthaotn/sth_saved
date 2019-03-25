@@ -258,3 +258,26 @@ chmod -R 777 /var/www/html/magnus/mage_ce_218_50426/var /var/www/html/magnus/mag
 
 CREATE USER 'magento'@'localhost' IDENTIFIED BY 'magento123';
 GRANT ALL PRIVILEGES ON *.* TO 'magento'@'localhost' WITH GRANT OPTION;
+
+---------------------------------------------------------------------------------------------------
+Vi du: Install a M2 module via composer
+Magento 2 Profiler Module
+Installation
+
+Log in to the Magento server, go to your Magento install dir and run these commands:
+
+composer require mirasvit/module-profiler
+
+
+php -f bin/magento module:enable Mirasvit_Profiler
+php -f bin/magento setup:upgrade
+php -f bin/magento mirasvit:profiler:enable
+
+Usage
+
+php -f bin/magento mirasvit:profiler:enable # Enable profiler
+php -f bin/magento mirasvit:profiler:disable # Disable profiler
+php -f bin/magento mirasvit:profiler:status # Current status
+php -f bin/magento mirasvit:profiler:allow-ips 127.0.0.1 192.268.22.11 # Allow only specified IPs
+php -f bin/magento mirasvit:profiler:allow-ips --none # Remove IP restriction
+
