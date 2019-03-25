@@ -27,26 +27,8 @@ git init
 git remote add origin https://bitbucket.org/magestore/loki_owen_45008_ce2_pos_aff_tier_coupon/
 git pull origin master
 ---------------------------------------------------------------------------------------------------
-Vi du: Install a M2 module via composer
-Magento 2 Profiler Module
-Installation
-
-Log in to the Magento server, go to your Magento install dir and run these commands:
-
-composer require mirasvit/module-profiler
-
-
-php -f bin/magento module:enable Mirasvit_Profiler
-php -f bin/magento setup:upgrade
-php -f bin/magento mirasvit:profiler:enable
-
-Usage
-
-php -f bin/magento mirasvit:profiler:enable # Enable profiler
-php -f bin/magento mirasvit:profiler:disable # Disable profiler
-php -f bin/magento mirasvit:profiler:status # Current status
-php -f bin/magento mirasvit:profiler:allow-ips 127.0.0.1 192.268.22.11 # Allow only specified IPs
-php -f bin/magento mirasvit:profiler:allow-ips --none # Remove IP restriction
+find pub/ -type d -exec chmod 0755 {} \;
+find pub/ -type f -exec chmod 0644 {} \;
 
 ---------------------------------------------------------------------------------------------------
 sudo apt-get --purge remove apache2
