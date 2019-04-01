@@ -17,6 +17,36 @@ sudo apt-get install php7.2-zip php7.2-fpm php7.2-mbstring php7.2-dom php7.2-int
 
 
 -----------------------------------CREATE NEW mysql user-------------------------------------------------------------
+sudo mysql
 CREATE USER 'magento'@'localhost' IDENTIFIED BY 'magento123';
 GRANT ALL PRIVILEGES ON * . * TO 'magento'@'localhost';
 FLUSH PRIVILEGES;
+
+-----------------------------------CHANGE Nginx & PHP configuration-------------------------------------------------------------
+nano /etc/nginx/nginx.conf
+change "user www-data;" to "user hoatt;"
+------------
+nano /etc/php/7.2/fpm/pool.d/www.conf 
+change some infformation to 
+user = hoatt
+group = hoatt
+listen.owner = hoatt
+listen.group = hoatt
+
+-----------------------------------UPLOAD CODE & SETUP SITE-------------------------------------------------------------
+create folder 
+mkdir /var/www/_magento_source/
+mkdir /var/www/_magento_source/m2
+upload code to /var/www/_magento_source/m2
+Giai nen 
+unzip -qq Magento-CE-2.3.1_sample_data-2019-03-18-06-46-56.zip -d mage_ce_231
+
+-----------------------------------CREATE NEW DATABASE-------------------------------------------------------------
+mysql -umagento -p
+CREATE DATABASE magento231;
+
+-----------------------------------BUILD MAGENTO SITE-------------------------------------------------------------
+
+php bin/magento setup:install --base-url="http://10.16.30.84/" --db-host="localhost" --db-name="magento231" --db-user="magento" --db-password="magento123" --admin-firstname="admin" --admin-lastname="admin" --admin-email="admin@localhost.com" --admin-user="admin" --admin-password="admin123" --language="en_US" --currency="USD" --timezone="America/Chicago" --use-rewrites="1" --backend-frontname="admin"
+
+
