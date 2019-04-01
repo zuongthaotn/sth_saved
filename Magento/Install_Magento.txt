@@ -46,8 +46,9 @@ unzip -qq Magento-CE-2.3.1_sample_data-2019-03-18-06-46-56.zip -d mage_ce_231
 mysql -umagento -p
 CREATE DATABASE magento231;
 
------------------------------------BUILD MAGENTO SITE-------------------------------------------------------------
-
+-----------------------------------BUILD MAGENTO SITE--NON-HTTPS---------------------------------------------------
 php bin/magento setup:install --base-url="http://10.16.30.84/" --db-host="localhost" --db-name="magento231" --db-user="magento" --db-password="magento123" --admin-firstname="admin" --admin-lastname="admin" --admin-email="admin@localhost.com" --admin-user="admin" --admin-password="admin123" --language="en_US" --currency="USD" --timezone="America/Chicago" --use-rewrites="1" --backend-frontname="admin"
 
+-----------------------------------BUILD MAGENTO SITE---HTTPS-----------------------------------------------------
+php bin/magento setup:install --base-url="https://magentodemo.fsoft.com.vn/" --db-host="localhost" --db-name="magento23104" --db-user="magento" --db-password="magento123" --admin-firstname="admin" --admin-lastname="admin" --admin-email="admin@localhost.com" --admin-user="admin" --admin-password="admin123" --language="en_US" --currency="USD" --timezone="America/Chicago" --use-rewrites="1" --backend-frontname="admin" --use-secure="1" --base-url-secure="https://magentodemo.fsoft.com.vn/" --use-secure-admin="1"
 
