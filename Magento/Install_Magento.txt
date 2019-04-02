@@ -34,6 +34,14 @@ group = hoatt
 listen.owner = hoatt
 listen.group = hoatt
 
+open file /etc/nginx/sites-available/default
+add 
+upstream fastcgi_backend {
+        server  unix:/var/run/php/php7.2-fpm.sock;
+}
+....
+        set $MAGE_ROOT /var/www/html/;
+        include /var/www/html/nginx.conf.sample;
 -----------------------------------UPLOAD CODE & SETUP SITE-------------------------------------------------------------
 create folder 
 mkdir /var/www/_magento_source/
