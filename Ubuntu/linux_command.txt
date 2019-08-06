@@ -56,6 +56,6 @@ Restart network(internet)
 sudo /etc/init.d/network-manager restart
 ---------------------------------------------------------------------------------------------------
 Export database 
-mysqldump -umagento -p --single-transaction magento1 > magento1.sql
+mysqldump -umagento -p --single-transaction --skip-triggers magento1 > magento1.sql
 su dung single-transaction de tranh cac truong hop sau nay import bi thieu bang
 
