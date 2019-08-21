@@ -47,6 +47,7 @@ yarn buildpack create-custom-origin packages/venia-concept
 ```
 Step 5. Start the server
 ```
+yarn run build
 yarn run watch:venia
 ```
 III. Start pwa-studio as a service
