@@ -62,6 +62,6 @@ php bin/magento setup:install --base-url="http://10.16.30.84/" --db-host="localh
 php bin/magento setup:install --base-url="https://magentodemo.fsoft.com.vn/" --db-host="localhost" --db-name="magento23104" --db-user="magento" --db-password="magento123" --admin-firstname="admin" --admin-lastname="admin" --admin-email="admin@localhost.com" --admin-user="admin" --admin-password="admin123" --language="en_US" --currency="USD" --timezone="America/Chicago" --use-rewrites="1" --backend-frontname="admin" --use-secure="1" --base-url-secure="https://magentodemo.fsoft.com.vn/" --use-secure-admin="1"
 
 -----------------------------------CREATE NEW MAGENTO ADMIN-----------------------------------------------------
-php bin/magento admin:user:create --admin-user='new-admin' --admin-password='!admin123!' --admin-email='info@domain.com' --admin-firstname='Jon' --admin-lastname='Doe'
+php bin/magento admin:user:create --admin-user='magnus' --admin-password='magnus123' --admin-email='magnus-admin@localhost.com' --admin-firstname='Magnus' --admin-lastname='Zuong'
 -----------------------------------CHANGE MAGENTO ADMIN PASSWORD-----------------------------------------------------
 php bin/magento admin:user:create --admin-user='admin' --admin-password='admin123' --admin-email='admin@localhost.com' --admin-firstname='Magnus' --admin-lastname='Zuong'
