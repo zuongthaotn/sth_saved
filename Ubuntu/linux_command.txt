@@ -3,7 +3,12 @@
 sudo adduser username
 sudo usermod -aG sudo username
 
-sudo usermod -a -G zuongthao userName
+sudo usermod -a -G groupName userName
+---------------------------------------------------------------------------------------------------
+cd /home;
+sudo mkdir peter
+sudo chown peter:peter peter
+sudo usermod -d /home/peter peter
 ---------------------------------------------------------------------------------------------------
 cp -a /var/www/html/magnus/mage_ee_225_cga /var/www/html/oliver
 ---------------------------------------------------------------------------------------------------
