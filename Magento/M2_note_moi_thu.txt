@@ -1,5 +1,9 @@
 ﻿
 --------------------------------------------------------------------------------------------------------------------------------
+General error: 1205 Lock wait timeout exceeded; try restarting transaction
+
+
+--------------------------------------------------------------------------------------------------------------------------------
 Fix lỗi redirect https sau khi clone 1 website sử dụng SSL về local
 Run sql
 UPDATE core_config_data SET value=REPLACE(value, 'https', 'http') WHERE value LIKE 'https%';
