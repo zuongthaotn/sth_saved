@@ -2,7 +2,7 @@
 # ================================================================== #
 # Ubuntu web server build shell script
 # ================================================================== #
-# Copyright (c) 2017 Zuongthao
+# Copyright (c)2017-2019 Zuongthao
 # This script is a private licensed version
 # ================================================================== #
 #
