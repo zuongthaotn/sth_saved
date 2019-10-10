@@ -26,11 +26,11 @@ echo "------------------------------------------------------------------"
 #
 HOSTNAME='localhost'
 MYSQLUSER='magento'
-MYSQLPW='magento'
-MAGENTOVERSION='ce_230'
-DOMAIN='ivalue230s.local'
-DB='ivalue230s1'
-NGINXUSER='temp-hoatt'
+MYSQLPW='magento123'
+MAGENTOVERSION='ce_232'
+DOMAIN='ce232.local'
+DB='ce232_local'
+NGINXUSER='zuongthao'
 # ================================================================== #
 SITEDIR='/var/www/html/'$DOMAIN
 MAGENTOSOURCEDIR='/var/www/_magento_source/m2/'$MAGENTOVERSION
@@ -43,10 +43,16 @@ echo "...Done creating database $DB"
 fi
 #
 echo "...Start copying magento source code"
-mkdir $SITEDIR
+if [ ! -d "$SITEDIR" ]; then
+  mkdir $SITEDIR
+fi
 cp -a $MAGENTOSOURCEDIR/* $SITEDIR
 echo "...Done copying magento source code"
 echo "...Adding Nginx configuration"
+#
+if [ -f "/etc/nginx/sites-enabled/$DOMAIN.conf" ]; then
+    rm -rf /etc/nginx/sites-enabled/$DOMAIN.conf
+fi
 #
 echo 'server {
 
