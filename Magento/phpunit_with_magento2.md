@@ -35,9 +35,9 @@ create new phpunit.xml: app/code/ZT/OptimizeUnitTest/etc/phpunit.xml
     </php>
     <filter>
         <whitelist addUncoveredFilesFromWhiteList="true">
-            <directory suffix=".php">../../BlogUnitTest/*</directory>
+            <directory suffix=".php">../../OptimizeUnitTest/*</directory>
             <exclude>
-                <directory>../../BlogUnitTest/*/Test</directory>
+                <directory>../../OptimizeUnitTest/*/Test</directory>
             </exclude>
         </whitelist>
     </filter>
