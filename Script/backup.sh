@@ -52,13 +52,13 @@ echo "...Done cleaning magento generated files in backup folder"
 cd $BACKUPFOLDER
 #
 echo "...Start backup mysql database"
-if ( mysqldump --user="$MYSQLUSER" --password="$MYSQLPW" $DB > $DB"_backup.sql" ) ; then
+if ( mysqldump --user="$MYSQLUSER" --password="$MYSQLPW" $DB > $DB"_mbackup.sql" ) ; then
 echo "...Done backup database"
 fi
 #
 cd ..
 #
 echo "Starting compressing folder"
-zip -r $BACKUPFOLDER".zip" $BACKUPFOLDER
+zip -r $BACKUPFOLDER".zip" $BACKUPFOLDER"/"*
 echo "--------------------Everything is Done!!!!---------------------------"
 

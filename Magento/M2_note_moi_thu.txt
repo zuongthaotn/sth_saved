@@ -1,5 +1,14 @@
 ﻿
 --------------------------------------------------------------------------------------------------------------------------------
+Deprecated Functionality: The each() function is deprecated.
+This message will be suppressed on further calls in /vendor/colinmollenhour/cache-backend-file/File.php on line 81
+Fix:
+Run php7.1 instead of php7.2
+--------------------------------------------------------------------------------------------------------------------------------
+General error: 1205 Lock wait timeout exceeded; try restarting transaction
+
+
+--------------------------------------------------------------------------------------------------------------------------------
 Fix lỗi redirect https sau khi clone 1 website sử dụng SSL về local
 Run sql
 UPDATE core_config_data SET value=REPLACE(value, 'https', 'http') WHERE value LIKE 'https%';
