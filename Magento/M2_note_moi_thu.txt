@@ -1,5 +1,9 @@
 ﻿
 --------------------------------------------------------------------------------------------------------------------------------
+Enable Magento developer mode nhưng Developer tab trong phần Stores => Configuration => Advance vẫn ko hiển thị.
+Not Fixed :
+
+--------------------------------------------------------------------------------------------------------------------------------
 Deprecated Functionality: The each() function is deprecated.
 This message will be suppressed on further calls in /vendor/colinmollenhour/cache-backend-file/File.php on line 81
 Fix:
