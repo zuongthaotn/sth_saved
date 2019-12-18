@@ -24,16 +24,19 @@ CREATE USER 'magento'@'localhost' IDENTIFIED BY 'magento123';
 GRANT ALL PRIVILEGES ON * . * TO 'magento'@'localhost';
 FLUSH PRIVILEGES;
 
+-----------------------------------CREATE NEW ubuntu user-------------------------------------------------------------
+adduser magento
+pass: ohmyprimus1234
 -----------------------------------CHANGE Nginx & PHP configuration-------------------------------------------------------------
 nano /etc/nginx/nginx.conf
-change "user www-data;" to "user hoatt;"
+change "user www-data;" to "user magento;"
 ------------
 nano /etc/php/7.2/fpm/pool.d/www.conf 
 change some infformation to 
-user = hoatt
-group = hoatt
-listen.owner = hoatt
-listen.group = hoatt
+user = magento
+group = magento
+listen.owner = magento
+listen.group = magento
 
 open file /etc/nginx/sites-available/default
 add 
