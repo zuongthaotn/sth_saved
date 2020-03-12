@@ -8,6 +8,20 @@
 mysqld  Ver 5.7.27-0ubuntu0.18.04.1 for Linux on x86_64 ((Ubuntu))
 => sudo chown zuongthao:zuongthao /var/lib/mysql/ la duoc
 hoac sudo chown mysql:mysql /var/lib/mysql/
+------------
+Neu van khong duoc thi lam tiep
+sudo chown mysql:mysql /var/lib/mysql/
+sudo chown mysql:mysql /var/lib/mysql-files/
+sudo chown mysql:mysql /var/lib/mysql-upgrade/
+sudo chown mysql:mysql /var/lib/mysql-keyring/
+-----------------
+Neu van khong duoc thi lam tiep
+mysqld_safe --defaults-file=/etc/my.cf
+Neu thay loi file permision thi 
+sudo mkdir -p /var/run/mysqld
+sudo chown mysql:mysql /var/run/mysqld
+sudo chmod -R 777 /var/log/
+sudo service mysql start
  --------------------------------------------------------------------------------------------------------------------------------
 Command returned non-zero exit code:
 `/usr/bin/php7.2 -f /var/www/html/bin/magento setup:di:compile`
