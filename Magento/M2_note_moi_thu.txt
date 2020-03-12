@@ -1,4 +1,9 @@
 ﻿
+ --------------------------------------------------------------------------------------------------------------------------------
+ Unable to unserialize value. Error: Syntax error after upgrade magento
+ Sau khi upgrade magento 2.2 to 2.3 gặp lỗi này
+ 1. Check php version 
+ 2. Nếu php version chạy 2.2 và 2.3 giống nhau thì chỉ cần xóa var/log/* và generated/* s
 --------------------------------------------------------------------------------------------------------------------------------
 Enable Magento developer mode nhưng Developer tab trong phần Stores => Configuration => Advance vẫn ko hiển thị.
 Not Fixed :
