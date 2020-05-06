@@ -1,0 +1,7 @@
+sudo snap install pycharm-community --classic
+
+sudo apt-get install python3-distutils
+
+apt-get update
+
+sudo apt install python3-pip
