@@ -9,3 +9,8 @@ sudo apt install python3-pip
 pip3 install mxnet
 
 pip3 install numpy
+
+pip3 uninstall numpy
+sudo apt-get install python3-numpy
+
+pip3 uninstall mxnet
