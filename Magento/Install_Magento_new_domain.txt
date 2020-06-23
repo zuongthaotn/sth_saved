@@ -50,7 +50,7 @@ upstream fastcgi_backend {
         server  unix:/var/run/php/php7.2-fpm.sock;
 }
 ....
-create new file ce-235p1s.local in /etc/nginx/sites-enable/
+create new file ce-235p1s.local in /etc/nginx/sites-enabled/
 with content:
 server {
 	server_name ce-235p1s.local;
