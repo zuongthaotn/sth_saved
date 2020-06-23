@@ -57,9 +57,6 @@ server {
 	set $MAGE_ROOT /var/www/html/ce-235p1s.local/;
         include /var/www/html/ce-235p1s.local/nginx.conf.sample;
 }
-------------
-Restart nginx by 
-sudo service nginx restart
 -----------------------------------UPLOAD CODE & SETUP SITE-------------------------------------------------------------
 create folder 
 mkdir /var/www/_magento_source/
@@ -72,7 +69,9 @@ copy code trong thu muc /var/www/_magento_source/m2/mage_ce_231 sang /var/www/ht
 -----------------------------------CREATE NEW DATABASE-------------------------------------------------------------
 mysql -umagento -p
 CREATE DATABASE magento231;
-
+-----------------------------------Restart nginx-------------------------------------------------------------------
+Restart nginx by 
+sudo service nginx restart
 -----------------------------------BUILD MAGENTO SITE--NON-HTTPS---------------------------------------------------
 php bin/magento setup:install --base-url="http://ce-235p1s.local/" --db-host="localhost" --db-name="magento231" --db-user="magento" --db-password="magento123" --admin-firstname="admin" --admin-lastname="admin" --admin-email="admin@localhost.com" --admin-user="admin" --admin-password="admin123" --language="en_US" --currency="USD" --timezone="America/Chicago" --use-rewrites="1" --backend-frontname="admin"
 
