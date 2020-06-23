@@ -31,6 +31,9 @@ FLUSH PRIVILEGES;
 adduser magento
 pass: ohmyprimus1234
 -----------------------------------CHANGE Nginx & PHP configuration-------------------------------------------------------------
+tao thu muc
+/var/www/html/ce-235p1s.local
+------------
 nano /etc/nginx/nginx.conf
 change "user www-data;" to "user magento;"
 ------------
@@ -54,6 +57,9 @@ server {
 	set $MAGE_ROOT /var/www/html/ce-235p1s.local/;
         include /var/www/html/ce-235p1s.local/nginx.conf.sample;
 }
+------------
+Restart nginx by 
+sudo service nginx restart
 -----------------------------------UPLOAD CODE & SETUP SITE-------------------------------------------------------------
 create folder 
 mkdir /var/www/_magento_source/
@@ -61,6 +67,7 @@ mkdir /var/www/_magento_source/m2
 upload code to /var/www/_magento_source/m2
 Giai nen 
 unzip -qq Magento-CE-2.3.1_sample_data-2019-03-18-06-46-56.zip -d mage_ce_231
+copy code trong thu muc /var/www/_magento_source/m2/mage_ce_231 sang /var/www/html/ce-235p1s.local
 
 -----------------------------------CREATE NEW DATABASE-------------------------------------------------------------
 mysql -umagento -p
