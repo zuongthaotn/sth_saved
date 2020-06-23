@@ -1,3 +1,16 @@
+Requirements: Create a new Magento 2 website with domain ce-235p1s.local on clean local.
+- Install nginx
+- Install php7.2
+- Install mysql-server
+- Create new mysql user (magento)
+- Create new ubuntu user(for remote host)(use current user on local)
+- Config nginx & php (domain, permission, web folder)
+- Create new database (magento231)
+- Upload/copy code
+- Install Magento 2 website
+
+--------------------------------------------------------------------------------------------------------------
+-----------------------------------INSTALL nginx & mysql server-----------------------------------------------
 sudo apt-get install nginx -y
 
 apt-get install mysql-server -y
