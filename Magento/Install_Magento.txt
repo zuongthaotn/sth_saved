@@ -46,6 +46,9 @@ upstream fastcgi_backend {
 ....
         set $MAGE_ROOT /var/www/html/;
         include /var/www/html/nginx.conf.sample;
+        
+--------
+sudo chown -R magento:magento /var/run/php/
 -----------------------------------UPLOAD CODE & SETUP SITE-------------------------------------------------------------
 create folder 
 mkdir /var/www/_magento_source/
