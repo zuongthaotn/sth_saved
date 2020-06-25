@@ -1,5 +1,17 @@
 ﻿
- 
+ Error : composer update 
+ The following exception is caused by a lack of memory or swap, or not having swap configured
+...
+[ErrorException]                                   
+  proc_open(): fork failed - Cannot allocate memory 
+ -----------------
+ Enable swap ubuntu
+ https://tecadmin.net/enable-swap-on-ubuntu/
+ then run
+ COMPOSER_MEMORY_LIMIT=-1 composer update
+
+-------------------------------------------------------------------------------
+
  Fix bug
  PHP Fatal error:  Uncaught Error: Undefined class constant 'PRE_COMMAND_RUN' in /var/www/html/ce-235p1s.local/vendor/laminas/laminas-dependency-plugin/src/DependencyRewriterPlugin.php:63
  
