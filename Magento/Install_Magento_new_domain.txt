@@ -70,8 +70,13 @@ copy code trong thu muc /var/www/_magento_source/m2/mage_ce_231 sang /var/www/ht
 mysql -umagento -p
 CREATE DATABASE magento231;
 -----------------------------------Restart nginx-------------------------------------------------------------------
+sudo chown -R magento:magento /usr/bin/php
+sudo chown -R magento:magento /var/run/php
+sudo chown -R magento:magento /var/log/nginx
+
 Restart nginx by 
 sudo service nginx restart
+sudo service php7.2-fpm restart
 -----------------------------------BUILD MAGENTO SITE--NON-HTTPS---------------------------------------------------
 php bin/magento setup:install --base-url="http://ce-235p1s.local/" --db-host="localhost" --db-name="magento231" --db-user="magento" --db-password="magento123" --admin-firstname="admin" --admin-lastname="admin" --admin-email="admin@localhost.com" --admin-user="admin" --admin-password="admin123" --language="en_US" --currency="USD" --timezone="America/Chicago" --use-rewrites="1" --backend-frontname="admin"
 
