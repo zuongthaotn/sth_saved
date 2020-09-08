@@ -1,0 +1,22 @@
+
+1. Install Xdebug
+sudo apt-get install php-xdebug
+
+2. 
+Chọn File -> Settings -> Languages & Frameworks -> PHP, lựa chọn Interpreter trong box Development environment, 
+IDE sẽ tự tìm version PHP hiện tại, nếu không thấy, các bạn tìm và trỏ đến file thực thi PHP.
+
+3.
+Tiếp theo trong menu con của PHP có mục Debug, chú ý box Xdebug, điền đúng Xdebug port đã cấu hình ở file php.ini và lưu lại
+
+4. 
+Giờ chúng ta cần tạo cấu hình để IDE lắng nghe request từ URL. Trên thanh menu, chọn Run -> Edit Configurations,
+chọn +, chọn tiếp PHP remote debug, điền name là tên dự án của bạn hoặc cái gì đó dễ nhớ, tạo mới một Servers nếu chưa có
+
+5.
+Tạo server xong thì điền tiếp Ide Key là PHPSTORM
+
+6.
+Bước cuối dùng chúng ta cần cài add-on cho trình duyệt. Với chrome chúng ta có xdebug helper, firefox có easy Xdebug, safari có Xdebug Toogler, opera có Xdebug launcher ...
+Các bạn cài đặt addon, mở addon option lên và cấu hình ide key là PHPSTORM.
+
